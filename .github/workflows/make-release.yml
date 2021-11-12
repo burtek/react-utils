@@ -1,0 +1,44 @@
+name: 'Make github and npm releases'
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  make-release:
+    name: 'Make github and npm releases'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 'Checkout source code'
+        uses: 'actions/checkout@v2'
+        with:
+          ref: ${{ github.ref }}
+      - name: 'Setup node'
+        uses: actions/setup-node@v2
+        with:
+          node-version: '12.x'
+          registry-url: 'https://registry.npmjs.org'
+          scope: '@dtrw'
+      - name: 'Build'
+        run: |
+          yarn
+          yarn build
+      - name: 'Create a github release'
+        uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          prerelease: false
+          automatic_release_tag: "${{ github.ref_name }}"
+          title: "${{ github.ref_name }}"
+          files: |
+            LICENSE
+            README.md
+            package.json
+            yarn.lock
+            bin
+      - name: 'Publish package'
+        run: yarn publish --tag latest --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

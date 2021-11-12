@@ -1,0 +1,39 @@
+{
+  "name": "@dtrw/react-utils",
+  "version": "0.0.0",
+  "description": "Collection of react utils",
+  "main": "bin/lib/index.js",
+  "module": "bin/esm/index.js",
+  "types": "bin/types/index.d.ts",
+  "author": "Bartosz Dotryw <burtekdotryw@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {},
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@dtrw/eslint-config": "^1.2.2",
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/react-hooks": "^7.0.2",
+    "@types/jest": "^27.0.2",
+    "@types/react": "^17.0.34",
+    "@types/rollup-plugin-peer-deps-external": "^2.2.1",
+    "eslint": "^8.2.0",
+    "jest": "^27.3.1",
+    "react": "^17.0.2",
+    "react-test-renderer": "^17.0.2",
+    "rollup": "^2.60.0",
+    "rollup-plugin-dts": "^4.0.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-ts": "^1.4.7",
+    "ts-jest": "^27.0.7",
+    "typescript": "^4.4.4"
+  },
+  "scripts": {
+    "build": "rollup --config",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  }
+}

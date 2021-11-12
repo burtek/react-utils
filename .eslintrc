@@ -1,0 +1,6 @@
+{
+    "extends": "@dtrw/eslint-config/eslint-config-base",
+    "parserOptions": {
+        "project": "./tsconfig.json"
+    }
+}

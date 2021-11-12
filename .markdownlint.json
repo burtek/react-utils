@@ -1,0 +1,53 @@
+{
+    "MD001": true,
+    "MD003": {
+        "style": "atx"
+    },
+    "MD004": {
+        "style": "sublist"
+    },
+    "MD005": true,
+    "MD007": true,
+    "MD010": true,
+    "MD011": true,
+    "MD012": true,
+    "MD013": false,
+    "MD018": true,
+    "MD019": true,
+    "MD022": true,
+    "MD023": true,
+    "MD024": {
+        "siblings_only": true
+    },
+    "MD025": true,
+    "MD026": true,
+    "MD027": true,
+    "MD028": true,
+    "MD029": true,
+    "MD030": true,
+    "MD031": true,
+    "MD032": true,
+    "MD033": {
+        "allowed_elements": [
+            "table", "thead", "tbody", "tr", "th", "td",
+            "style", "code", "b", "i", "u", "br"
+        ]
+    },
+    "MD034": true,
+    "MD035": true,
+    "MD036": true,
+    "MD037": true,
+    "MD038": true,
+    "MD039": true,
+    "MD040": true,
+    "MD041": true,
+    "MD042": true,
+    "MD045": true,
+    "MD046 ": {
+        "style": "fenced"
+    },
+    "MD047": true,
+    "MD048 ": {
+        "style": "backtick"
+    }
+}
