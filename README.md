@@ -9,6 +9,8 @@ This is repository with some react utils (just hooks for now) that are used (or 
 - [Usage](#usage)
   + [`useArray`](#-usearray-)
   + [`useObject`](#-useobject-)
+  + [`useToggle`](#-usetoggle-)
+  + [`usePrevious`](#-useprevious-)
 
 ## Install
 

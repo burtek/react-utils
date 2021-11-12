@@ -1,2 +1,9 @@
-/node_modules
+/node_modules/
+/.github/
+/.gitignore
+/.markdownlint.json
+/.eslintrc
+
 /src
+/jest.config.json
+/rollup.config.js
