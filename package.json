@@ -35,5 +35,8 @@
     "build": "rollup --config",
     "test": "jest",
     "test:watch": "jest --watch"
+  },
+  "repository": {
+    "url": "https://github.com/burtek/react-utils"
   }
 }
