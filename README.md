@@ -2,6 +2,8 @@
 
 ![npm version](https://badge.fury.io/js/@dtrw%2Freact-utils.svg)
 ![NPM License](https://img.shields.io/npm/l/@dtrw/react-utils)
+[![codecov](https://codecov.io/gh/burtek/react-utils/branch/master/graph/badge.svg?token=OJV98VOSQ2)](https://codecov.io/gh/burtek/react-utils)
+![tests](https://github.com/burtek/react-utils/actions/workflows/test-and-build.yml/badge.svg)
 
 This is repository with some react utils (just hooks for now) that are used (or will be used) in my other projects, but can also be used by anyone
 
