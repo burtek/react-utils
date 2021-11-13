@@ -25,15 +25,21 @@ jobs:
         run: yarn
       - name: 'Test'
         run: yarn test:ci
-      - uses: codecov/codecov-action@v2
+      - name: Codecov
+        uses: codecov/codecov-action@v2
         if: always()
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          files: ./junit.xml
+          files: ./coverage/coverage-final.json
           flags: unittests
           name: react-utils
           fail_ci_if_error: true
           verbose: true
+      - name: Publish Unit Test Results
+        uses: EnricoMi/publish-unit-test-result-action@v1
+        if: always()
+        with:
+          files: junit.xml
       - name: 'Build'
         run: yarn build
       - name: 'Create a github release'

@@ -35,7 +35,8 @@
   "scripts": {
     "build": "rollup --config",
     "test": "jest",
-    "test:ci": "jest --ci",
+    "test:ci": "jest --config jest-ci.config.js",
+    "test:coverage": "jest --config jest-coverage.config.js",
     "test:watch": "jest --watch"
   },
   "repository": {

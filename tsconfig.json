@@ -9,7 +9,7 @@
         "dom"
     ],                          
     "strict": true,  
-    "esModuleInterop": false,                 
+    "esModuleInterop": true,                 
     "outDir": "bin",
     "rootDir": "./",
     "resolveJsonModule": true
