@@ -28,5 +28,14 @@ jobs:
         run: yarn
       - name: 'Test'
         run: yarn test:ci
+      - uses: codecov/codecov-action@v2
+        if: always()
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: ./junit.xml
+          flags: unittests
+          name: react-utils
+          fail_ci_if_error: true
+          verbose: true
       - name: 'Build'
         run: yarn build
