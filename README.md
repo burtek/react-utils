@@ -30,6 +30,8 @@ npm i -D @dtrw/react-utils
 
 ### `useArray`
 
+Inspired by [@lbfalvy's useArray hook](https://github.com/lbfalvy/react-utils#usearray)
+
 This hook aims to achieve two goals:
 
 - allows using arrays in `useMemo`/`useCallback`/`useEffect`-like hooks and make sure they won't rerun if arrays don't actually change
