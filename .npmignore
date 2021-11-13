@@ -7,3 +7,5 @@
 /src
 /jest.config.json
 /rollup.config.js
+
+junit.xml

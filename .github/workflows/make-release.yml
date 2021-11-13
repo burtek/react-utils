@@ -21,10 +21,12 @@ jobs:
           node-version: '12.x'
           registry-url: 'https://registry.npmjs.org'
           scope: '@dtrw'
+      - name: 'Install dependencies'
+        run: yarn
+      - name: 'Test'
+        run: yarn test:ci
       - name: 'Build'
-        run: |
-          yarn
-          yarn build
+        run: yarn build
       - name: 'Create a github release'
         uses: "marvinpinto/action-automatic-releases@latest"
         with:
