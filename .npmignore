@@ -8,4 +8,5 @@
 /jest.config.json
 /rollup.config.js
 
+/coverage
 junit.xml
