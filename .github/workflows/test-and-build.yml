@@ -32,7 +32,7 @@ jobs:
         if: always()
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          files: ./junit.xml
+          files: ./coverage/clover.xml, ./junit.xml
           flags: unittests
           name: react-utils
           fail_ci_if_error: true
