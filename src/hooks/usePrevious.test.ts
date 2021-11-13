@@ -5,7 +5,7 @@ describe('usePrevious', () => {
     it('should return undefined on first render', () => {
         const { result } = renderHook(() => usePrevious(123));
 
-        expect(result.current).toBe(undefined);
+        expect(result.current).toBeUndefined();
     });
 
     it('should return given value on next render', () => {
@@ -25,17 +25,21 @@ describe('usePrevious', () => {
         let value: typeof value1 | typeof value2 | typeof value3 = value1;
 
         const { rerender, result } = renderHook(() => usePrevious(value));
-        expect(result.current).toBe(undefined);
+
+        expect(result.current).toBeUndefined();
 
         value = value2;
         rerender();
+
         expect(result.current).toBe(value1);
 
         value = value3;
         rerender();
+
         expect(result.current).toBe(value2);
 
         rerender();
+
         expect(result.current).toBe(value3);
     });
 });

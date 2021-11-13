@@ -14,20 +14,23 @@ describe('useObject', () => {
         expect(() => {
             const { result } = renderHook(() => useObject(input as any));
             return result.current;
-        }).toThrowError(/^useObject requires an object/);
+        }).toThrow(/^useObject requires an object/);
     });
+
     it('should throw if input is array', () => {
         expect(() => {
             const { result } = renderHook(() => useObject([]));
             return result.current;
-        }).toThrowError(/^Use useArray for arrays/);
+        }).toThrow(/^Use useArray for arrays/);
     });
 
     it('should return same instance on first and next render', () => {
         const { rerender, result } = renderHook(() => useObject(instance1));
 
         expect(result.current).toBe(instance1);
+
         rerender();
+
         expect(result.current).toBe(instance1);
     });
 
@@ -48,7 +51,7 @@ describe('useObject', () => {
         object = instance2;
         rerender();
 
-        expect(comp).toBeCalledWith(instance1, instance2);
+        expect(comp).toHaveBeenCalledWith(instance1, instance2);
         expect(result.current).toBe(instance2);
     });
 
