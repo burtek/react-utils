@@ -1,13 +1,16 @@
-name: 'Make github and npm releases'
+name: 'Test and build a PR'
 
 on:
   push:
-    tags:
-      - "v*"
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
 
 jobs:
-  make-release:
-    name: 'Make github and npm releases'
+  test-build:
+    name: 'Test and build'
     runs-on: ubuntu-latest
 
     steps:
@@ -36,20 +39,3 @@ jobs:
           verbose: true
       - name: 'Build'
         run: yarn build
-      - name: 'Create a github release'
-        uses: "marvinpinto/action-automatic-releases@latest"
-        with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          prerelease: false
-          automatic_release_tag: "${{ github.ref_name }}"
-          title: "${{ github.ref_name }}"
-          files: |
-            LICENSE
-            README.md
-            package.json
-            yarn.lock
-            bin
-      - name: 'Publish package'
-        run: yarn publish --tag latest --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
