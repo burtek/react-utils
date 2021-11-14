@@ -13,14 +13,16 @@ describe('useArray', () => {
         expect(() => {
             const { result } = renderHook(() => useArray(input as any));
             return result.current;
-        }).toThrowError(/^useArray requires array, got/);
+        }).toThrow(/^useArray requires array, got/);
     });
 
     it('should return reference to input on first and next render', () => {
         const { rerender, result } = renderHook(() => useArray(initialArray));
 
         expect(result.current).toBe(initialArray);
+
         rerender();
+
         expect(result.current).toBe(initialArray);
     });
 

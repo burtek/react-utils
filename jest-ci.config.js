@@ -1,7 +1,24 @@
 /** @type {import('ts-jest/dist/types').InitialOptionsTsJest} */
-const config = {
+module.exports = {
     ci: true,
-    reporters: ["default", "jest-junit"]
+    projects: [
+        {
+            displayName: 'test',
+            preset: 'ts-jest',
+            testEnvironment: 'jest-environment-jsdom'
+        },
+        {
+            displayName: 'lint',
+            runner: 'jest-runner-eslint',
+            testMatch: [
+                '<rootDir>/src/**/*.js',
+                '<rootDir>/src/**/*.jsx',
+                '<rootDir>/src/**/*.ts',
+                '<rootDir>/src/**/*.tsx'
+            ]
+        }
+    ],
+    collectCoverage: true,
+    coverageProvider: 'v8',
+    reporters: ['default', 'jest-junit']
 };
-
-module.exports = Object.assign({}, require('./jest-coverage.config.js'), config);

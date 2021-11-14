@@ -25,12 +25,14 @@ describe('useToggle', () => {
             const [, toggle] = result.current;
             toggle();
         });
+
         expect(result.current[0]).toBe(!initial);
 
         act(() => {
             const [, toggle] = result.current;
             toggle();
         });
+
         expect(result.current[0]).toBe(initial);
     });
 
@@ -48,12 +50,14 @@ describe('useToggle', () => {
             const [, , setState] = result.current;
             setState(target);
         });
+
         expect(result.current[0]).toBe(target);
 
         act(() => {
             const [, toggle] = result.current;
             toggle();
         });
+
         expect(result.current[0]).toBe(!target);
     });
 
@@ -65,6 +69,7 @@ describe('useToggle', () => {
             setState(false);
             toggle();
         });
+
         expect(result.current[0]).toBe(true);
     });
 });
