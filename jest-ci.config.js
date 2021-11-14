@@ -5,10 +5,7 @@ module.exports = {
         {
             displayName: 'test',
             preset: 'ts-jest',
-            testEnvironment: 'jest-environment-jsdom',
-            collectCoverage: true,
-            coverageProvider: 'v8',
-            reporters: ['default', 'jest-junit']
+            testEnvironment: 'jest-environment-jsdom'
         },
         {
             displayName: 'lint',
@@ -20,5 +17,8 @@ module.exports = {
                 '<rootDir>/src/**/*.tsx'
             ]
         }
-    ]
+    ],
+    collectCoverage: true,
+    coverageProvider: 'v8',
+    reporters: ['default', 'jest-junit']
 };
