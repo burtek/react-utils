@@ -1,8 +1,18 @@
 {
   "name": "@dtrw/react-utils",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Collection of react utils",
-  "keywords": ["react", "reactjs", "hooks", "react hooks", "utils", "react utils", "useArray", "useToggle", "usePrevious"],
+  "keywords": [
+    "react",
+    "reactjs",
+    "hooks",
+    "react hooks",
+    "utils",
+    "react utils",
+    "useArray",
+    "useToggle",
+    "usePrevious"
+  ],
   "main": "bin/lib/index.js",
   "module": "bin/esm/index.js",
   "types": "bin/types/index.d.ts",
